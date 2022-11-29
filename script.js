@@ -1,0 +1,22 @@
+var nombreCache = 'hola';
+self.addEventListener(
+    'install',
+    function(event){
+        event.waitUntil(
+            caches.open(nombreCache)
+            .then(
+                function(cache){
+                    cache.addAll(
+                        [
+                            'algo.js',
+                            'style.css',
+                            'index.html',
+                            '/icons/icono1.png',
+                            './icons/icono2.png'
+                        ]
+                    );
+                }
+            )
+        );
+    }
+);
