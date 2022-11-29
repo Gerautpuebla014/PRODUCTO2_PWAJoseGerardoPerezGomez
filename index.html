@@ -73,15 +73,15 @@
         <script>
             
             if('serviceWorker' in navigator){
-                navigator.serviceWorker.register('sw.js')
+                navigator.serviceWorker.register('script.js')
                 .then(
                     function(registration){
-                        console.log('Registro satisfactorio del sw en el ámbito: ',
+                        console.log('Registro satisfactorio  ',
                                     registration.scope);
                     }
                 ).catch(
                     function(err){
-                        console.log('El SW no se registró', err);
+                        console.log('no se registró', err);
                     }
                 );
             }
