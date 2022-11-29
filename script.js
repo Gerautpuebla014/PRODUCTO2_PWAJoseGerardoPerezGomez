@@ -1,4 +1,4 @@
-var nombreCache = 'hola';
+var nombreCache = 'uno';
 self.addEventListener(
     'install',
     function(event){
@@ -12,7 +12,9 @@ self.addEventListener(
                             'style.css',
                             'index.html',
                             '/icons/icono1.png',
-                            './icons/icono2.png'
+                            './icons/icono2.png',
+                            './icons/icono3.png',
+                            './icons/icono4.png'
                         ]
                     );
                 }
