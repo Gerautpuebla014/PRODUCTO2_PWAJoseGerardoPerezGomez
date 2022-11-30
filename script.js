@@ -22,3 +22,23 @@ self.addEventListener(
         );
     }
 );
+self.addEventListener(
+    'fetch', 
+    function(event) {
+        event.respondWith( 
+            caches.match(event.request)
+            .then(
+                function(respuesta){
+                    if(respuesta){ 
+                        console.log('La respuesta proviene del cache.');
+                        return respuesta; 
+                    }
+                    else{
+                        console.log('La respuesta no proviene del cache.');
+                        return fetch(event.request);
+                    }
+                }
+            ) 
+        );
+    }
+); 
